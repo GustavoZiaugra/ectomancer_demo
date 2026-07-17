@@ -5,7 +5,7 @@ defmodule EctomancerDemo.MixProject do
     [
       app: :ectomancer_demo,
       version: "0.1.0",
-      elixir: "~> 1.15",
+      elixir: "~> 1.18",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -62,7 +62,7 @@ defmodule EctomancerDemo.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:ectomancer, path: "/home/zig/projects/ectomancer"}
+      {:ectomancer, github: "GustavoZiaugra/ectomancer", branch: "release/v1.5.0"}
     ]
   end
 

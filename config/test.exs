@@ -1,5 +1,8 @@
 import Config
 
+# Ectomancer repo configuration
+config :ectomancer, :repo, EctomancerDemo.Repo
+
 # Configure your database
 #
 # The MIX_TEST_PARTITION environment variable can be used
