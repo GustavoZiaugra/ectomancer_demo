@@ -1,7 +1,8 @@
 defmodule EctomancerDemo.MCP do
   use Ectomancer,
     name: "ectomancer-demo",
-    version: "1.0.0"
+    version: "1.0.0",
+    authorize: fn actor, _action -> Map.get(actor, :role) == :admin end
 
   expose EctomancerDemo.User,
     actions: [:list, :get, :create, :update, :destroy]

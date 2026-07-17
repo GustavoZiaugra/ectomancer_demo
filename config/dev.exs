@@ -55,10 +55,10 @@ config :ectomancer_demo, EctomancerDemoWeb.Endpoint,
     web_console_logger: true,
     patterns: [
       # Static assets, except user uploads
-      ~r"priv/static/(?!uploads/).*\.(js|css|png|jpeg|jpg|gif|svg)$"E,
+      ~r/priv\/static\/(?!uploads\/).*\.(js|css|png|jpeg|jpg|gif|svg)$/,
       # Router, Controllers, LiveViews and LiveComponents
-      ~r"lib/ectomancer_demo_web/router\.ex$"E,
-      ~r"lib/ectomancer_demo_web/(controllers|live|components)/.*\.(ex|heex)$"E
+      ~r/lib\/ectomancer_demo_web\/router\.ex$/,
+      ~r/lib\/ectomancer_demo_web\/(controllers|live|components)\/.*\.(ex|heex)$/
     ]
   ]
 
