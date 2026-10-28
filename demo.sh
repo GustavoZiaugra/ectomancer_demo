@@ -5,7 +5,7 @@ set -e
 MCP_URL="http://127.0.0.1:4000/mcp"
 
 echo "╔══════════════════════════════════════════════════╗"
-echo "║     🧙 Ectomancer MCP Demo - v1.2.1              ║"
+echo "║     🧙 Ectomancer MCP Demo - v3.0.3              ║"
 echo "╚══════════════════════════════════════════════════╝"
 echo ""
 
@@ -35,7 +35,7 @@ INIT_RESP=$(curl -s -w "\n%{http_code}" -X POST "$MCP_URL" \
     "id": "1",
     "method": "initialize",
     "params": {
-      "protocolVersion": "2024-11-05",
+      "protocolVersion": "2025-03-26",
       "capabilities": {},
       "clientInfo": {"name": "demo-client", "version": "1.0.0"}
     }

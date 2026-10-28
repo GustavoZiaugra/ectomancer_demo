@@ -14,12 +14,7 @@ defmodule EctomancerDemo.Application do
        repos: Application.fetch_env!(:ectomancer_demo, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:ectomancer_demo, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: EctomancerDemo.PubSub},
-      %{
-        id: Anubis.Server.Supervisor,
-        start:
-          {Anubis.Server.Supervisor, :start_link,
-           [EctomancerDemo.MCP, [transport: {:streamable_http, start: true}]]}
-      },
+      Ectomancer.child_spec(EctomancerDemo.MCP, transports: [:streamable_http]),
       EctomancerDemoWeb.Endpoint
     ]
 

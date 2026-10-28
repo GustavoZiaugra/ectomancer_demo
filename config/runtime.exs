@@ -7,6 +7,12 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 
+# Demo-only authentication: treat every MCP request as an admin so the
+# write tools work without a login screen. Do not copy this into a real app.
+config :ectomancer,
+  repo: EctomancerDemo.Repo,
+  actor_from: fn _conn -> %{role: :admin} end
+
 # ## Using releases
 #
 # If you use `mix release`, you need to explicitly enable the server
